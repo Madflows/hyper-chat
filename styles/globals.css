@@ -1,26 +1,56 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: "Axiforma Extra Bold";
+  src: url("/fonts/axiforma-extra-bold.ttf");
+
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Axiforma Black";
+  src: url("/fonts/axiforma-black.ttf");
+
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/avertademo-regular.otf");
+
+  /* font-weight: 900; */
+  font-style: normal;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@tailwind base;
+@tailwind components;
+@layer components {
+  .cta-btn {
+    @apply py-4 px-6 relative before:absolute before:w-full before:h-full before:-z-10 before:bg-gradient-to-r before:from-pink before:to-lightPurple before:left-0 before:top-0 before:blur-[10px]  before:rounded-full  before:opacity-40  hover:before:opacity-60  before:transition-all transition-all text-white bg-gradient-to-r mx-auto mt-[2rem] from-pink to-lightPurple flex items-center  rounded-full;
+  }
 }
+@tailwind utilities;
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Averta", sans-serif;
+}
+body {
+  @apply bg-black text-gray;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+h1,
+h2,
+h3 {
+  font-family: "Axiforma Extra Bold", sans-serif !important;
+  font-weight: 800;
+}
+.axiforma-extra-bold {
+  font-family: "Axiforma Extra Bold", sans-serif !important;
+  font-weight: 800;
+}
+
+.axiforma-black {
+  font-family: "Axiforma Black", sans-serif !important;
+  font-weight: 900;
 }
