@@ -34,14 +34,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Averta", sans-serif;
+  /* font-family: "Euclid Circular A", sans-serif; */
 }
 html {
-
   @apply bg-black text-gray;
-
 }
 #root {
-  background: radial-gradient(circle,rgba(2,0,36,0) 0,#000 100%);
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #000 100%);
   @apply h-screen;
 }
 body {

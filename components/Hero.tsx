@@ -1,8 +1,11 @@
 import React from "react";
 import { DiApple } from "react-icons/di";
 import toast from 'react-hot-toast';
+import { useRouter } from "next/router";
+import { TiArrowRightThick } from 'react-icons/ti';
 
 const Hero = () => {
+  const router = useRouter();
 
   return (
     <header className="pt-[10vh] px-4">
@@ -38,7 +41,8 @@ const Hero = () => {
       </p>
 
       <CTAButton onClick={() => {
-        toast.success('Wow, you clicked me!')
+        toast.success('Redirecting to sign in')
+        router.push('/signin');
       }} />
     </header>
   );
@@ -49,15 +53,15 @@ export interface ButtonProps {
   onClick: () => void;
 }
 
-const CTAButton = ({onClick} : ButtonProps) => {
+const CTAButton = ({ onClick } : ButtonProps) => {
   return (
-    <button
-      className="cta-btn" onClick={onClick}>
-      <span>
-        <DiApple className="text-4xl leading-none" />
+    <button className="cta-btn group gap-2" onClick={onClick}>
+      <span className="text-lg text-[#ffffff] leading-none font-bold flex items-center">
+        Get Hyper
       </span>
-      <span className="text-lg text-white leading-none font-bold flex items-center">
-        Start Chatting now
+      <span className="group-hover:translate-x-2 transition-transform">
+        {/* <DiApple className="text-4xl leading-none" /> */}
+        <TiArrowRightThick className="text-2xl text-[#ffffff] " />
       </span>
       <div></div>
     </button>
