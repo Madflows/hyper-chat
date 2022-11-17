@@ -1,7 +1,9 @@
 import React from "react";
 import { DiApple } from "react-icons/di";
+import toast from 'react-hot-toast';
 
 const Hero = () => {
+
   return (
     <header className="pt-[10vh] px-4">
       <h1 className="text-5xl relative md:text-6xl lg:text-9xl text-center font-black ">
@@ -35,15 +37,22 @@ const Hero = () => {
         works on both your desktop and phone.
       </p>
 
-      <CTAButton />
+      <CTAButton onClick={() => {
+        toast.success('Wow, you clicked me!')
+      }} />
     </header>
   );
 };
 
-const CTAButton = () => {
+
+export interface ButtonProps {
+  onClick: () => void;
+}
+
+const CTAButton = ({onClick} : ButtonProps) => {
   return (
     <button
-      className="cta-btn">
+      className="cta-btn" onClick={onClick}>
       <span>
         <DiApple className="text-4xl leading-none" />
       </span>
