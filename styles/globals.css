@@ -24,7 +24,7 @@
 @tailwind components;
 @layer components {
   .cta-btn {
-    @apply py-4 px-6 relative before:absolute before:w-full before:h-full before:-z-10 before:bg-gradient-to-r before:from-pink before:to-lightPurple before:left-0 before:top-0 before:blur-[10px]  before:rounded-full  before:opacity-40  hover:before:opacity-60  before:transition-all transition-all text-white bg-gradient-to-r mx-auto mt-[2rem] from-pink to-lightPurple flex items-center  rounded-full;
+    @apply py-4 px-6 relative before:absolute before:w-full before:h-full before:-z-10 before:bg-gradient-to-r before:from-pink before:to-lightPurple before:left-0 before:top-0 before:blur-[10px]  before:rounded-full  before:opacity-40  hover:before:opacity-80  before:transition-all transition-all text-white bg-gradient-to-r mx-auto mt-[2rem] from-pink to-lightPurple flex items-center  rounded-full;
   }
 }
 @tailwind utilities;
@@ -35,8 +35,19 @@
   box-sizing: border-box;
   font-family: "Averta", sans-serif;
 }
-body {
+html {
+
   @apply bg-black text-gray;
+
+}
+#root {
+  background: radial-gradient(circle,rgba(2,0,36,0) 0,#000 100%);
+  @apply h-screen;
+}
+body {
+  background-image: url("/assets/grid.svg");
+  @apply h-screen overflow-y-auto;
+  background-position: 50% 54%;
 }
 
 h1,

@@ -13,7 +13,7 @@ const Hero = () => {
         <span className="axiforma-extra-bold text-transparent bg-clip-text bg-gradient-to-r from-deepPurple to-lightLime">
           Reimagined
         </span>
-        <span className="absolute top-[40%] invisible md:visible right-[4rem]">
+        <span className="absolute top-[30%] invisible md:visible right-[4rem]">
           <svg
             width="241"
             height="107"
@@ -47,8 +47,8 @@ const CTAButton = () => {
       <span>
         <DiApple className="text-4xl leading-none" />
       </span>
-      <span className="text-lg leading-none font-bold flex items-center">
-        Download for macOS
+      <span className="text-lg text-white leading-none font-bold flex items-center">
+        Start Chatting now
       </span>
       <div></div>
     </button>
