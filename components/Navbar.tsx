@@ -65,7 +65,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: "0" }}
             exit={{ opacity: 0, y: "-600px" }}
             transition={{ duration: 0.5 }}
-            className="absolute top-0 pt-[148px] left-0 z-50 shadow-lg bg-black w-full p-4 h-[600px]"
+            className="absolute top-0 pt-[148px] left-0 z-50 shadow-lg bg-gradient-to-b to-black from-[#010101] w-full p-4 h-[600px]"
           >
             <MobileMenu />
           </motion.div>
@@ -87,8 +87,10 @@ function MobileMenu() {
               <li key={index}>
                 <Link href={link.href}>
                   <p
-                    className={`font-bold ${
-                      router.pathname == link.href ? "text-white" : "text-gray"
+                    className={`text-white ${
+                      router.pathname == link.href
+                        ? "font-bold"
+                        : "opacity-60 font-medium"
                     }`}
                   >
                     {link.name}
